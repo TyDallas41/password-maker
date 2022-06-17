@@ -11,11 +11,7 @@ var numberArr = ['1','2','3','4','5','6','7','8','9','0'];
 
 
 function generatePassword(){
-
-// Prompt user for the password criteria
-//  a.password length 0 <120
-//  b. lowercase, uppercase, number, special characters 
-// Validate the input
+    
 // Display password to the page
 }
 
