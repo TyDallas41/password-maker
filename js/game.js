@@ -32,9 +32,28 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 function getPrompts(){
+    choiceArr = [];
+    
     characterLength = parseInt(prompt("How long do you want your password to be? (8 -128 characters)"));
     //Verify input
     if(isNaN(characterLength) || characterLength < 8 || characterLength > 128){
         alert("Character length has to be a number, 8 - 128 digits. Please try again.");
     }
+
+    if(confirm("Would you like lowercase letters in your password?")){
+        choiceArr = choiceArr.concat(lowercaseArr);
+    }
+
+    if(confirm("Would you like uppercase letters in your password?")){
+        choiceArr = choiceArr.concat(uppercaseArr);
+    }
+
+    if(confirm("Would you like special characters in your password?")){
+        choiceArr = choiceArr.concat(specialCharArr);
+    }
+
+    if(confirm("Would you like numbers in your password?")){
+        choiceArr = choiceArr.concat(numberArr);
+    }
+    return true;
 }
